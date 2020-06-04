@@ -15,3 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/student','StudentController@display');
+
+Route::post('/add_data','StudentController@save');

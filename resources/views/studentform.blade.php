@@ -11,6 +11,13 @@
     <title>Crud Operations</title>
   </head>
   <body>
+
+    @if(\Session::has('success'))
+    <div class="alert alert-warning">
+        <h4>{{\Session::get('success') }}</h4>
+    </div>
+    @endif
+
    <form action="/add_data" method="POST">
     {{csrf_field()}}
     <div class="container">
