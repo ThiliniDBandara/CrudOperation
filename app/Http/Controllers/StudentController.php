@@ -19,4 +19,11 @@ class StudentController extends Controller
 
         return redirect('student')->with('success','Data Saved');
     }
+    public function show(){
+        return view('/studentview');
+    }
+    public function index(){
+        $student = DB::select('select * from students');
+        return view('studentview', ['student'=>$student]);
+    }
 }

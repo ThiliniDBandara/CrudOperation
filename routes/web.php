@@ -17,3 +17,7 @@ Route::get('/', function () {
 Route::get('/student','StudentController@display');
 
 Route::post('/add_data','StudentController@save');
+
+Route::get('/studentadd','StudentController@display');
+Route::get('/studentview','StudentController@index');
+Route::get('/student','StudentController@show');
